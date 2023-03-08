@@ -19,7 +19,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textContainer: {
-    fontSize: 20,
+    fontSize: 25,
+  },
+  finishButton: {
+    backgroundColor: "#9cd1af",
+  },
+  actionsButton: {
+    backgroundColor: "#fdeec1",
+  },
+  clearButton: {
+    backgroundColor: "#fcc295",
   },
 });
 
@@ -51,7 +60,7 @@ const Numbers = ({ lastAction, setLastAction }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleButtonPress("action", "/")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.actionsButton }}
         >
           <Text style={styles.textContainer}>/</Text>
         </TouchableOpacity>
@@ -77,7 +86,7 @@ const Numbers = ({ lastAction, setLastAction }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleButtonPress("action", "*")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.actionsButton }}
         >
           <Text style={styles.textContainer}>*</Text>
         </TouchableOpacity>
@@ -103,7 +112,7 @@ const Numbers = ({ lastAction, setLastAction }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleButtonPress("action", "-")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.actionsButton }}
         >
           <Text style={styles.textContainer}>-</Text>
         </TouchableOpacity>
@@ -111,7 +120,7 @@ const Numbers = ({ lastAction, setLastAction }) => {
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => handleButtonPress("clear", "AC")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.clearButton }}
         >
           <Text style={styles.textContainer}>AC</Text>
         </TouchableOpacity>
@@ -123,13 +132,13 @@ const Numbers = ({ lastAction, setLastAction }) => {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleButtonPress("finish", "=")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.finishButton }}
         >
           <Text style={styles.textContainer}>=</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => handleButtonPress("action", "+")}
-          style={styles.button}
+          style={{ ...styles.button, ...styles.actionsButton }}
         >
           <Text style={styles.textContainer}>+</Text>
         </TouchableOpacity>
