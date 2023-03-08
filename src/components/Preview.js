@@ -1,10 +1,19 @@
 import React from "react";
-import { Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-const Preview = ({ finalStr }) => {
+const styles = StyleSheet.create({
+  textContainer: {
+    fontSize: 40,
+    padding: 40,
+  },
+});
+
+const Preview = ({ lastAction }) => {
   return (
     <View>
-      <Text>{finalStr}</Text>
+      <Text style={styles.textContainer}>
+        {lastAction.current.val || lastAction.previous.val}
+      </Text>
     </View>
   );
 };
