@@ -2,36 +2,6 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { calculate } from "../utils";
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexDirection: "row",
-    height: "25%",
-  },
-  button: {
-    height: "80%",
-    padding: 10,
-    backgroundColor: "#efefef",
-    margin: 5,
-    width: "22%",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  textContainer: {
-    fontSize: 25,
-  },
-  finishButton: {
-    backgroundColor: "#9cd1af",
-  },
-  actionsButton: {
-    backgroundColor: "#fdeec1",
-  },
-  clearButton: {
-    backgroundColor: "#fcc295",
-  },
-});
-
 const Numbers = ({ lastAction, setLastAction }) => {
   const handleButtonPress = (action, val) => {
     setLastAction(calculate(lastAction, action, val));
@@ -146,5 +116,35 @@ const Numbers = ({ lastAction, setLastAction }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    height: "25%",
+  },
+  button: {
+    height: "80%",
+    padding: 10,
+    backgroundColor: "#efefef",
+    margin: 5,
+    width: "22%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  textContainer: {
+    fontSize: 25,
+  },
+  finishButton: {
+    backgroundColor: "#9cd1af",
+  },
+  actionsButton: {
+    backgroundColor: "#fdeec1",
+  },
+  clearButton: {
+    backgroundColor: "#fcc295",
+  },
+});
 
 export default Numbers;
