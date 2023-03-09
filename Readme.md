@@ -2,7 +2,8 @@
 
 A simple React Native calculator app. 
 
-![Demo](./assets/demo.png)
+
+<img src="https://imgur.com/aYaOnQR.png" width="100">
 
 ### Installation
 
